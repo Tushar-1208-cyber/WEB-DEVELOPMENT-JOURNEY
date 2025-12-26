@@ -1,0 +1,86 @@
+/* h1{
+    color: green;
+} */
+
+/* p{
+    color: red;
+} */
+
+button{
+    color: #0000ff;
+    background-color: rgb(123, 158, 123);
+}
+
+body{
+    background-color: rgb(188, 188, 131);
+}
+
+#headingone{
+    color: red;
+}
+
+#headingtwo{
+    color: chocolate;
+}
+
+/* #headingthree{
+    color: blue;
+} */
+
+.myClass{
+    color: magenta;
+}
+
+#box{
+    background-color: blue;
+}
+
+
+/* h2{
+    text-align: center;
+    text-decoration: blue wavy underline;
+}
+
+h3{
+    text-align: center;
+    text-decoration: red dotted overline;
+}
+
+h4{
+    text-align: center;
+    text-decoration: pink line-through;
+} */
+
+a{
+    text-decoration: none;
+}
+
+#h1{
+    font-weight: 100;
+}
+/* 
+#h2{
+    font-weight: 250;
+}
+
+#h3{
+    font-weight: 600;
+}
+
+#h4{
+    font-weight: 900;
+} */
+
+p{
+    /* text-align: right; */
+    text-align: center;
+    /* text-align: right; */
+}
+
+#one{
+    font-family: arial;
+}
+
+#two{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
