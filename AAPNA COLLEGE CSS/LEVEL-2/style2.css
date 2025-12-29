@@ -1,0 +1,37 @@
+/* div{
+    background-color: pink;
+    display: inline;
+} */
+button{
+    display: block;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    padding: 25px;
+    /* display: inline;
+    display inline krne se margin top or bottom apply nhi hota hai for this we will se inline-block property */
+    display: inline-block;
+
+    /* background-color: rgba(255,0,0,0.5); */
+}
+/* #box2{ */
+    /* display: none;
+    none krne se box pura hee delete ho jaega no space left for box  */
+
+    /* visibility: hidden;
+    visibility ko hide krne se vo box gayab ho jaega per uska space reserved rhega vhi per hee  */
+/* } */
+
+
+#box1{
+    background-color: rgba(0,0,255,0.5);
+}
+#box2{
+    background-color: rgba(0,0,255,0.75);
+}
+#box3{
+    background-color: rgba(0,0,255,1);
+}
