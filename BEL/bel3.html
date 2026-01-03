@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .labelcolor{
+        color: blue;
+    }
+    table, td, tr{
+        /* border-color: green;
+        border-width: 2px;
+        border-style: solid; */
+        border: 5px solid red;
+        /* IF WE REMOVE SOLID THEN BORDER WILL NOT COME  */
+    }
+    
+    </style>
+</head>
+
+<body>
+    
+    <center><h1>REGISTRATION FORM</h1></center>
+    <form>
+    <table width="700" height="300" style="background-color: cyan;">
+       
+
+        <tr>
+            <td class="labelcolor" style="background-color: green;"><label for="sname">Student Name:</label></td>
+            <td><input type="text" name="sname" id="sname" placeholder="enter name" size="30" maxlength="10"></td>
+        </tr>
+
+
+
+        <tr>
+            <td class="labelcolor" style="background-color: brown";><label for="roll">Roll No:</label></td>
+            <td><input type="text" name="roll" id="roll" placeholder="enter roll" size="20"></td>
+        </tr>
+
+
+
+        <tr>
+            <td class="labelcolor" style="background-color: yellow";><label for="marks">Marks:</label></td>
+            <td><input type="number" name="marks" id="marks" min="33" max="100" placeholder="marks" ></td>
+        </tr>
+
+
+
+        <tr>
+            <td class="labelcolor" style="background-color: green";><label for="gender">Select Gender:</label></td>
+            <td>
+                <input type="radio" name="gender" id="male" value="M">
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" id="female" value="F">
+                <label for="female">Female</label>
+            </td>
+        </tr>
+
+        
+        
+        <tr>
+            <td class="labelcolor" style="background-color: brown";><label for="contact" >Contact Details:</label></td>
+            <td><input type="tel" name="contact" id="contact"></td>
+        </tr>
+
+
+
+        <tr>
+            <td class="labelcolor"><label for="hobbies">What are you interested in?</label></td>
+            <td>
+                <select name="hobbies" id="hobbies" multiple>
+                    <option value="Reading">Reading</option>
+                    <option value="Surfing">Surfing</option>
+                    <option value="Cricket" selected>Cricket</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="labelcolor"><label for="cmnt">Comments:</label></td>
+            <td><textarea id="cmnt" name="cmnt" rows="4" cols="50">
+            </textarea>
+            </td>
+        </tr>
+
+    </table>
+    </form>
+</body>
+</html>
