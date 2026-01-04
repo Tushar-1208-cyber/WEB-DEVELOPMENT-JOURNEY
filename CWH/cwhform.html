@@ -1,0 +1,44 @@
+<!-- FORMS KA USE HTML ME  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORM</title>
+</head>
+<body>
+    <div>
+        <h1>TRAVEL FORM FOR OUR TRIP</h1>
+        <form action="form.php">
+            <input type="text" placeholder="Enter Your Name">
+            <br>
+            <!-- PLACEHOLDER ATTRIBUTE IS USED FOR WRITING PARTICULAR THING IN THAT SPACE -->
+            <label for="SectionidA">
+            <input type="radio" value="Section A" name="Section" id="SectionidA">Section A
+            </label>
+            <label for="SectionidB">
+            <input type="radio" value="Section B" name="Section" id="SectionidB">Section B
+            </label>
+            <label for="SectionidC">
+            <input type="radio" value="Section C" name="Section" id="SectionidC">Section C
+            </label>
+            <br>
+            <input type="checkbox" id="foodcanteen" class="red" name="canteen">
+            <label for="foodcanteen">want food canteen card</label>
+            <br>
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input LINK FOR INPUT ELEMENTS MDN REFERENCE -->
+            <textarea name="Explain" id="Explain" cols="30" rows="10" placeholder="Explain why you want to join"></textarea>
+            <br>
+            <select name="car" id="car">select your car
+                <option value="no car">Select your car</option>
+                <option value="omni1">omni1</option>
+                <option value="omni2">omni2</option>
+                <option value="dzire">dzire</option>
+                <option value="i10">i10</option>
+                <option value="i20">i20</option>
+            </select>
+        </form>
+    </div>
+</body>
+</html>
