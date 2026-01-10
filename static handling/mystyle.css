@@ -1,0 +1,17 @@
+div{
+    /* height: 300px; */
+    padding: 100px;
+    background-color: red;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+h1{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    text-decoration: solid;
+}
