@@ -1,0 +1,24 @@
+{
+    "image" :"BMU.jpeg" ,
+    "school" : "School of Engineering and Techonology" ,
+    "university" : "BML Munjal University" ,
+    "place" : "Guragaon",
+    "depts" : [{
+        "department" : "Computer Science" ,
+        "theme" : "Hardware and Software" , 
+        "elig" : "Open to all" , 
+        "elective" : ["IOT" , "ADS" , "Blockchain"]
+    } ,
+    {
+        "department" : "Mechanical Engineering" ,
+        "theme" : "Hardware and Software" , 
+        "elig" : "Open to all" , 
+        "elective" : ["IOT" , "Fluid Mechanics" , "Robotics"]
+    } , 
+    {
+        "department" : "Civil Engineering" ,
+        "theme" : "Hardware and Software" , 
+        "elig" : "Open to all" , 
+        "elective" : ["IOT" , "Control Sytems" , "VSLI"]
+    }]
+}
