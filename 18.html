@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            background-color: red;
+            color: white;
+        } */
+        .header{
+            background-color: green;
+            color: white;
+        }
+        #hid{
+            background-color: yellow;
+            color: white;
+        }
+        #img1{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <script>
+        // let btn=document.getElementById("hid");  do it own
+    
+        function changeColors()
+        {
+            // document.getElementById("hid").style.backgroudColor="yellow";
+            // document.getElementById("hid").style.color="blue";
+            // let btn = document.getElementById("hid");
+            btn.style.backgroundColors="green";
+            btn.style.color="yellow";
+        }
+        function changeText()
+        {
+            // document.getElementById("hid").innerHTML="BMU";
+            // let btn=document.getElementById("hid");
+            // btn.innerHTML="BML" 
+            btn.innerHTml="BML Munjal University"
+        }
+        function createBox()
+        {
+            let box=document.getElementById("box1");
+            box.style.backgroundColor="red";
+            box.style.width= "100px";
+            box.style.height= "100px";
+            box.style.margin="auto";
+        }
+        function zoomIn()
+        {
+            document.getElementById("box1").style.transform="scale(2,2)";
+        }
+        function zoomOut()
+        {
+            document.getElementById("box1").style.transform="scale(1,1)";
+        }
+        function showImage()
+        {
+            document.getElementById("img1").src="bird-8788491_1280.webp";
+            // document.getElementById("img1").style.width="100px";
+            // document.getElementById("img1").style.height="100px";
+            // style tag me height and width
+        }
+        function sayBye()
+        {
+            document.getElementById("img1").src="stock-vector-bye-speech-bubble-goodbye-text-hand-drawn-quote-bye-icon-lettering-doodle-phrase-speech-bubble-2169913371.jpg";
+            // document.getElementById("img1").style.width="100px";
+            // document.getElementById("img1").style.height="100px";
+        }
+        function showDate()
+        {
+            document.getElementById("date").innerHTML=Date();
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- <h1 class="header">BML Munjal University</h1> -->
+    <h1 id="hid">BML Munjal University</h1>
+    <button onclick="changeColors()">Change Color</button>
+    <br>
+    <button onclick="changeText()">Change Text</button>
+    <div id="box1"></div>
+    <br>
+    <button onclick="createBox()">Show Box</button>
+    <br>
+    <button onclick="zoomIn()">Zoom In</button>
+    <br>
+    <button onclick="zoomOut()">Zoom Out</button>
+    <img id="img1">
+    <br>
+    <button onclick="showImage()">Show Image</button>
+    <br>
+    <button onclick="sayBye()">Say Bye</button>
+    <br>
+    <h2 id="date"></ht>
+    <button onclick="showDate()"> Show Date and Time </button>
+</body>
+</html>
