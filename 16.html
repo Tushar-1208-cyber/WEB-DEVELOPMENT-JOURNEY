@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+      position: relative; 
+      width: 500px;       
+      height: 500px;      
+      background-color: red; 
+      margin: 50px auto;      
+      border: 2px solid black; 
+    }
+
+    .IB {
+      position: absolute;
+      width: 200px;         
+      height: 200px;        
+      background-color: blue; 
+      top: 0;              
+      left: 0;             
+      transition: transform 3s ease; 
+    }
+
+    .IB:hover {
+      transform: translate(50px, 100px); /* Move right by 50px and down by 100px */
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="IB"></div>
+    </div>
+
+</body>
+</html>
