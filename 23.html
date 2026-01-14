@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            background-color: blue;
+        }
+        .c2{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="start">Start Timer</button>
+    <button id="stop">Stop Timer</button>
+
+    <div id="box1" style="width: 100px; height: 100px; border: 2px solid black;">BML MUNJAL UNIVERSITY</div>
+
+    <script>
+        document.getElementById("start").addEventListener("click", startTimer);
+        document.getElementById("stop").addEventListener("click", stopTimer);
+
+        let div = document.getElementById("box1");
+        let interval_id = null;
+
+        function startTimer() {
+            if (interval_id == null) {
+                interval_id = setInterval(animateText, 1000);
+            }
+        }
+
+        function stopTimer() {
+            clearInterval(interval_id);
+            interval_id = null;
+        }
+
+        function animateText() {
+            if (div.textContent == "BML MUNJAL UNIVERSITY") 
+            {
+                div.textContent = "SCHOOL OF ENGINEERING AND TECHNOLOGY";
+            } else 
+            {
+                div.textContent = "BML MUNJAL UNIVERSITY";
+            }
+
+            if(div.className == "c2")
+            {
+                div.className="c1";
+            }
+            else
+            {
+                div.className="c2";
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
