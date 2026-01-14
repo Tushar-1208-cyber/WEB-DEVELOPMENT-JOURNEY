@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #box1{
+            width: 100px;
+            height: 100px ;
+            background-color: red;
+        } */
+        .c1{
+            background-color: blue;
+        }
+        .c2{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="box1" style="width: 200px; height: 200px ; background-color: red;"></div> -->
+    <button id="start">Start Timer</button>
+    <button id="stop">Stop Timer</button>
+
+        <div id="box1" style="width: 100px; height: 100px; border: 2px solid black; "></div>
+
+
+    <script>
+        document.getElementById("start").addEventListener("click" ,  startTimer);
+        document.getElementById("stop").addEventListener("click" ,  stopTimer);
+
+        let div = document.getElementById("box1");
+        let div1 = document.getElementById("box2");
+        let inteval_id = null;
+        function startTimer()
+        {
+            // alert("hello");
+            // alert(div.className);
+            // div.className="c1";
+            // div.classList.add("c1");
+
+
+            // div1.className="c1";
+            // div.classList.add("c1");
+        }
+        if(inteval_id==null)
+        {
+            interval_id = setInterval(animateColor, 1000);
+        }
+        function stopTimer()
+        {
+            // alert("hey");
+            clearInterval(interval_id);
+            inteval_id = null;
+        }
+        function animateColor()
+        {
+            if(div.className == "c2")
+            {
+                div.className="c1";
+            }
+            else
+            {
+                div.className="c2";
+
+            }
+        }
+       
+        
+    </script>
+</body>
+</html>
