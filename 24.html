@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header></header>
+
+    <section></section>
+
+    <script>
+
+        let header = document.querySelector("header");
+        let section = document.querySelector("section");
+        
+
+
+        async function loadJsonBMUpage()
+        {
+            //create request object
+            let request = new Request("json/bmu.json");
+
+            // fetch response
+            let response = await fetch(request);
+
+            // get json object using response
+            let jsonObj = await response.json();
+            // console.log(JSON.stringify(jsonObj));
+            alert(jsonObj);
+            updateHeader(jsonObj);
+            updateSection(jsonObj);
+        }
+
+        function updateHeader(jsonObj)
+        {
+            let img = document.createElement("img");
+            img.src = jsonObj["image"];
+            img.style.margin = "0 auto";
+            img.style.display = "block";
+            header.appendChild(img);
+
+            let h2 = document.createElement("h2");
+            h2.textContent = jsonObj["school"];
+            h2.style.textAlign="center";
+            header.appendChild[h2];
+
+            let h1 = document.createElement("h1");
+            h1.textContent = `${jsonObj["university"]}, ${jsonObj["place"]}`;
+            h1.style.textAlign="center";
+            header.appendChild[h1];            
+
+        }
+        function updateSection(jsonObj)
+        {
+            let dept = jsonObj["depts"];
+
+            for(let depts of depts)
+            {
+                let dname = document.createElement("h2");
+               dname.textContent = dept.dept_name;
+
+                let article = document.createElement("article");
+                article.style.float = "left";
+                article.style.width = "33%";
+                article.appendChild(dname);
+                section.appendChild(article);
+
+                let theme = document.createElement("h2")
+                theme.textContent = "Theme :" +dept.theme;
+                article.appendChild(theme);
+                section.appendChild(article);
+
+                let elig = document.createElement("h2")
+                elig.textContent = "Eligibility :" +dept.elig;
+                article.appendChild(elig);
+                section.appendChild(article);
+
+                let elec = document.createElement("h2")
+                elec.textContent = "Electives :" 
+                article.appendChild(elec);
+                section.appendChild(article);
+
+                let ul = document.createElement("ul");
+                let elect_sub = dept.electives;
+
+                for(let subject of elect_sub)
+                {
+                    let li = document.createElement("li");
+                    li.textContent = subject;
+                    ul.appendChild(li);
+                    
+                }
+
+            }
+        }
+
+
+        loadJsonBMUpage();
+    </script>
+    
+</body>
+</html>
