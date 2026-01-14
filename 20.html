@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin:auto;
+            background-color: red;
+            /* display: block;  */
+            /* we can write none for gayab krne ke liye */
+        }
+        /* button{
+            /* margin: auto; */
+            /* height: 100px;
+            width: 100px; */
+        /* }  */
+    </style>
+    <script>
+        function appDis()
+        {
+            let box = document.getElementById("box");
+            if(box.style.display=="none")
+                {
+                    box.style.display=="block";
+                }
+            else
+                {
+                box.style.display=="none";
+                }
+        }
+        function appHelloBye()
+        {
+            let box = document.getElementById("box");
+            if(box.style.display=="none")
+                {
+                    box.style.display=="block";
+                }
+            else
+                {
+                box.style.display=="none";
+                }
+        }
+    </script>
+
+</head>
+<body>
+    <div id="box"></div>
+    <button onclick="appDis">Show/Hide</button>
+    <button onclick="appHelloBye">Hello/Bye</button>
+</body>
+</html>
