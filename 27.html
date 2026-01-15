@@ -1,0 +1,71 @@
+<!-- create a web page to incorporate unordered list .This list must be update through a class also it mush have functionality to remove an item from unordered list. The item number/ the item to be removed must be prompted by user.The item to be added in the list also should be provided by the user -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic List</h1>
+    <div class="controls">
+        <input type="text" id="newItem" placeholder="Enter new item">
+        <button onclick="dynamicList.addItem()">Add Item</button>
+        <br>
+        <input type="number" id="removeIndex" placeholder="Enter index to remove">
+        <button onclick="dynamicList.removeItem()">Remove Item</button>
+    </div>
+    <ul id="itemList"></ul>
+
+    <script>
+        class DynamicList {
+            constructor() {
+                this.list = document.getElementById('itemList');
+                this.newItemInput = document.getElementById('newItem');
+                this.removeIndexInput = document.getElementById('removeIndex');
+            }
+
+            addItem() {
+                const newItemText = this.newItemInput.value.trim();
+                if (newItemText) {
+                    const li = document.createElement('li');
+                    li.textContent = newItemText;
+                    this.list.appendChild(li);
+                    this.newItemInput.value = '';
+                } else {
+                    alert('Please enter an item to add.');
+                }
+            }
+
+            removeItem() {
+                const index = parseInt(this.removeIndexInput.value) - 1;
+                const items = this.list.getElementsByTagName('li');
+                if (index >= 0 && index < items.length) {
+                    this.list.removeChild(items[index]);
+                    this.removeIndexInput.value = '';
+                } else {
+                    alert('Please enter a valid item number to remove.');
+                }
+            }
+        }
+
+        const dynamicList = new DynamicList();
+    </script>
+</body>
+</html>
