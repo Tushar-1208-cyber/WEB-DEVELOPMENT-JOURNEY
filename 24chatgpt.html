@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMU Page</title>
+</head>
+<body>
+
+    <header></header>
+
+    <section></section>
+
+    <script>
+        let header = document.querySelector("header");
+        let section = document.querySelector("section");
+        section.style.float = "left";
+        section.style.width = "33%";
+
+        async function loadJsonBMUpage() {
+            // Create request object
+            let request = new Request("json/bmu.json");
+
+            // Fetch response
+            let response = await fetch(request);
+
+            // Get JSON object using response
+            let jsonObj = await response.json();
+            console.log(JSON.stringify(jsonObj));
+
+            // Update header and section
+            updateHeader(jsonObj);
+            updateSection(jsonObj);
+        }
+
+        function updateHeader(jsonObj) {
+            let img = document.createElement("img");
+            img.src = jsonObj["image"];
+            img.style.margin = "0 auto";
+            img.style.display = "block";
+            header.appendChild(img);
+
+            let h2 = document.createElement("h2");
+            h2.textContent = jsonObj["school"];
+            h2.style.textAlign = "center";
+            header.appendChild(h2);
+
+            let h1 = document.createElement("h1");
+            h1.textContent = `${jsonObj["university"]}, ${jsonObj["place"]}`;
+            h1.style.textAlign = "center";
+            header.appendChild(h1);
+        }
+
+        function updateSection(jsonObj) {
+            let depts = jsonObj["depts"];
+
+            for (let dept of depts) {
+                let h2 = document.createElement("h2");
+                h2.textContent = dept["department"];
+                section.appendChild(h2);
+
+                // Display additional department details
+                let p = document.createElement("p");
+                p.textContent = `Theme: ${dept["theme"]}, Eligibility: ${dept["elig"]}`;
+                section.appendChild(p);
+
+                // Display elective courses
+                let ul = document.createElement("ul");
+                dept["elective"].forEach(course => {
+                    let li = document.createElement("li");
+                    li.textContent = course;
+                    ul.appendChild(li);
+                });
+                section.appendChild(ul);
+            }
+        }
+
+        // Call the function to load JSON data
+        loadJsonBMUpage();
+    </script>
+    
+</body>
+</html>
