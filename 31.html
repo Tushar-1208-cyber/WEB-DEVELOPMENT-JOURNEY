@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{font-size: 30pt;}
+    </style>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        class CreateUL{
+            constructor(ul_ref)
+            {
+                this.ul_ref = ul_ref;
+                this.li_arr = [];
+            }
+
+            addListITem(itemName)
+            {
+                let li = document.createElement("li");
+                li.textContent = itemName;
+                this.ul_ref.appendChild(li);
+                this.li.arr.push(itemName);
+                console.log(this.li_arr)
+            }
+
+            removeFirstItem()
+            {
+                this.ul_ref.removeChild(this.ul_ref.firstElementChild);
+                this.li_arr.splice(0,1);
+                console.log(this.li_arr);
+            }
+
+            removeItemAtIndex(idx)
+            {
+                this.li_arr.splice(idx,1);
+                console.log(this.li_arr);
+                while(this.ul_ref.firstElementChild)
+                {
+                    this.ul_ref.removeChild(this.ul_ref)
+                }
+
+                for(let listitem of this.li_arr)
+                {
+                    let li = document.createElement("li");
+                    li.textContent = listitem;
+                    this.ul_ref.appendChild(li);
+
+                 }
+            }
+
+
+        }
+
+        let ulist = document.querySelector("ul");
+        let ob = new CreateUL(ulist);
+
+        ob.addListITem("BMU1");
+        ob.addListITem("BMU2");
+        ob.addListITem("BMU3");
+        ob.addListITem("BMU4");
+        ob.addListITem("BMU5");
+        ob.addListITem("BMU6");
+        ob.removeItemAtIndex(3);
+
+        ob.removeFirstItem();
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        // let arr = ["1" , "2", "3", "4" ,"5", "6" ,"7"]
+        // console.log(arr)
+        // arr.splice(2,1);
+        // conso.log(arr)
+        // arr.splice(3,2);
+        // conso.log(arr)
+        // arr.splice(2,1, "h1","hey");
+        // cons.log(arr)
+        // arr.splice(3,0, "hello","students");
+        // cons.log(arr)
+        // arr.splice(1,0, "a","b","c");
+        // cons.log(arr)
+    </script>
+</body>
+</html>
