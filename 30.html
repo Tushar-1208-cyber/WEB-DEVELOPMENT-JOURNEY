@@ -1,0 +1,129 @@
+<!-- create a web page to incorporate unordered list .This list must be update through a class also it must 
+have functionality to remove an item from unordered list. The item number/the item to be removed must be prompted by user
+.The item to be added in the list also should be provided by the user  -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 30pt;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ulist"></ul>
+    <script>
+        class ULUpdate
+        {
+            constructor(ul_ref)
+            {
+                this.ul_ref = ul_ref;
+                this.li_arr ={};
+            }
+
+            addItem(itemname)
+            {
+                let li = document.createElement("li");
+                li.textContent = itemname;
+                this.ul_ref.appendChild(li);
+                this.li_arr.push(itemname);
+                console.log(li_arr);
+            }
+
+            removeFirstElement()
+            {
+                this.ul_ref.removeChild(this.ul_ref.firstElementChild);
+                this.li_arr
+            }
+
+        }
+
+        let ul = document.getElementById("ulist")
+
+        let ob = new ULUpdate();
+        ob.addItem("hello1");
+        ob.addItem("hello2");
+        ob.addItem("hello3");
+        ob.addItem("hello4"); -->
+
+
+        <!-- // let arr = ["1", "2", "three", "4", "5"]
+        // console.log(arr)
+
+        // arr.splice(2,0,"hello")
+        // console.log(arr)
+
+        // arr.splice(1,1,"three")
+        // console.log(arr)
+
+        // arr.splice(1,2,"4" , "5")
+        // console.log(arr) -->
+
+    <!-- </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <style>
+        *{
+            font-size: 30pt;
+        }
+    </style>
+
+</head>
+<body>
+    <ul id="ulist"></ul>
+    <script>
+        class ULUpdate
+        {
+            constructor(ul_ref)
+            {
+                this.ul_ref = ul_ref;
+                this.li_arr=[];
+            }
+
+            addItem(itemname)
+            {
+                let li = document.createElement('li');
+                li.textContent=itemname;
+                this.ul_ref.appendChild(li);
+                this.li_arr.push(itemname);
+                console.log(this.li_arr);
+            }
+        }
+        let ul = document.getElementById("ulist")
+        let ob= new ULUpdate(ul);
+
+        ob.addItem("hello 1");
+        ob.addItem("hello 2");
+        ob.addItem("hello 3");
+        ob.addItem("hello 4");
+
+        
+
+
+
+        // let arr=["1","2","three","4","5"]
+        // console.log(arr)
+    
+        // arr.splice(2,0,"hello")
+        // console.log(arr)
+     
+        // arr.splice(1,1,"three")
+        // console.log(arr)
+    
+        // arr.splice(1,2,"4","5")
+        // console.log(arr)
+       </script>
+</body>
+</html>
