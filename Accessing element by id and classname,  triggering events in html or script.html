@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+   
+<button onclick="chanegBackgroundColor()">Change Background Color</button>
+<button id="btn1">Change Background Color(id)</button>
+<button id="btn2">Change Background Color(id)</button>
+<button class="btn3">Change Background Color(class)</button>
+<button class="btn4">Change Background Color(class)</button>
+<button class="btn5">Change Background Color(class)</button>
+
+<script>
+    let color;
+    function inputColor()
+    {color=prompt("enter any color name");}
+
+    function changeBackgroundColor()
+    {inputColor();
+ document.body.style.backgroundColor=color;}
+
+document.getElementById("btn1").addEventListener("click" ,changeBackgroundColor);
+document.getElementById("btn2").addEventListener("click", function(){
+    changeBackgroundColor();
+    // let c = prompt("enter any color");
+    // document.body.style.backgroundColor=c;
+});
+
+document.querySelector(".btn3").addEventListener("click", ()=>{
+        let c = prompt("enter any color");
+    document.body.style.backgroundColor=c;
+    });
+
+    document.getElementsByClassName("btn4")[0].addEventListener("click", ()=>{
+        let c = prompt("enter any color");
+    document.body.style.backgroundColor=c;
+    });
+
+    document.getElementsByClassName("btn5")[0].addEventListener("click", function(){
+       let c = prompt("enter any color");
+    document.body.style.backgroundColor=c;
+    });
+</script>
+</body>
+</html>
