@@ -1,0 +1,96 @@
+<!-- create a html document to have a table the number of rows in the table depends upon
+the registration form what you are designing this registration form must have text box 
+for textual and numeric data, the form must make use of radio button and checkbox there 
+should be a one large textbox to add the comments , also the form must have drop down list.
+All the labels must be in the same font color but there shall be different background color
+and different formatting in terms of bold and itlaic .Design this html document by incorporating , following 
+1. inline style
+2. style elment selector (hint: using tagname in style tags)
+3. class selector -->
+
+
+<!-- The maxLength attribute specifies the maximum number of characters allowed in the search field. The default value is 524288. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Excercise</title>
+    <style>
+        .style1{
+            background-color: darkgreen;
+            color: white; 
+        }
+        h2 {
+            background-color: beige;
+            color: violet;
+            text-decoration: underline;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color: cyan; color: purple;">
+        Title of the document:
+    </h1>  
+    <h1>
+        Web Programming
+    </h1>  
+    <h2><center>
+        Registration Form
+    </center>
+    </h2>
+    <form>
+        <table>
+        <tr class="style1">
+            <td>
+                <label for="sname">Student Name:</label>
+            </td>
+            <td>
+                <input type="text" name="sname" id="sname">
+            </td>
+        </tr>
+            <td>
+                <label for="roln">Roll No.:</label>
+            </td>
+            <td>
+                <input type="number" name="roln" id="roln" placeholder="Enter Your Enrollment No.">
+            </td>
+        <tr>
+            <td>
+                <label for="gender">Gender</label>
+            </td>
+            <td>
+                <input type="radio" name="gender" id="male" value="M">Male
+                <input type="radio" name="gender" id="female" value="F">Female
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <label for="club">Enrolled Main Club:</label>
+            </td>
+            <td>
+                <select name="club" id="club">
+                    <option value="sci">Sci-Mat</option>
+                    <option value="sierra">Sierra</option>
+                    <option value="liq">Liquid</option>
+                    <option value="acm">ACM</option>
+                </select>            
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <label for="elective"> Elective Courses</label>
+            </td>
+            <td>
+                <input type="checkbox" name="datam" id="datam"><label for="datam">Data Mining</label>
+                <input type="checkbox" name="gamep" id="gamep"><label for="gamep">Game Programming</label>
+                <input type="checkbox" name="clc" id="clc"><label for="clc">Cloud Computing</label>
+            </td>
+        </tr>       
+        </table>
+    </form>
+</body>
+</html>
